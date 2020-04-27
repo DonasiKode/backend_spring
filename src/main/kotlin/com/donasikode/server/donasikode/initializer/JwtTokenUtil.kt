@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit
 
 @Component
 object JwtTokenUtil {
-//    @Value("\${server.secret}")
+    @Value("\${server.secret}")
     private var serverSecret: String = "==D0n4s1K0d3=="
     // expired after 7 day
     private val expireTime = TimeUnit.DAYS.toMillis(7)

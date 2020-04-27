@@ -56,7 +56,7 @@ class RegistrationController(
                 r.fullname,
                 r.email,
                 r.phone,
-                "user",
+                r.role ?: "user",
                 System.currentTimeMillis(),
                 System.currentTimeMillis(),
                 true
@@ -96,7 +96,8 @@ data class RegistrationData(
     var password: String,
     var email: String,
     var fullname: String,
-    var phone: String?
+    var phone: String?,
+    var role: String?
 )
 
 data class LoginData(
